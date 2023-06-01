@@ -1,6 +1,3 @@
-
-
-
 import 'package:driver_app/welcome_page.dart';
 import 'package:flutter/material.dart';
 

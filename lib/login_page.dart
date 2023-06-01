@@ -71,7 +71,6 @@ class LoginPage extends StatelessWidget {
                     height: 60,
                     onPressed: () {
 
-
                     },
                     // defining the shape
                     shape: RoundedRectangleBorder(

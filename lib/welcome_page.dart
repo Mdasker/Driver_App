@@ -31,7 +31,6 @@ class WellcomePage extends StatelessWidget {
                       fontWeight: FontWeight.bold,
                       fontSize: 40,
                     ),
-
                   ),
                   SizedBox(
                     height: 20,
@@ -46,7 +45,6 @@ class WellcomePage extends StatelessWidget {
                     )
                 ),
               ),
-
               Column(
                 children: <Widget>[
                   SizedBox(height:20),
@@ -56,7 +54,6 @@ class WellcomePage extends StatelessWidget {
                     height: 60,
                     onPressed: (){
                       Navigator.push(context, MaterialPageRoute(builder: (context)=> LoginPage()));
-
                     },
                     color: Color(0xff2b6ed4),
                     shape: RoundedRectangleBorder(
@@ -79,8 +76,6 @@ class WellcomePage extends StatelessWidget {
                               SvgPicture.asset("assets/icons/getStart.svg")
                             ],
                           ),
-
-
                         ],
                       ),
                     ),
