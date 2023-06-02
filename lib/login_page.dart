@@ -22,11 +22,14 @@ class LoginPage extends StatelessWidget {
               child: Column(
                 children: [
                   Text(
-                      "Enter your mobile number"
+                      "Enter your mobile number",
+                    style: TextStyle(
+                      fontSize: 20,
+                    ),
                   ),
-                  SizedBox(height:15),
-                  inputFile(hintext: "Enter a Mobile Number"),
-                  inputFile(hintext: "password", obscureText: true),
+                  SizedBox(height:10),
+                  inputFile(hintext: "Enter a mobile number"),
+                  inputFile(hintext: "password", obscureText: true, ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
@@ -42,7 +45,7 @@ class LoginPage extends StatelessWidget {
                     ],
                   ),
 
-                  SizedBox(height:40),
+                  SizedBox(height:35),
                   MaterialButton(
                     minWidth: double.infinity,
                     height: 60,
@@ -90,20 +93,34 @@ class LoginPage extends StatelessWidget {
 
                   SizedBox(height:40),
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text('Tapping equals agreement to our'),
+                      Text('Tapping equals agreement to our '),
                       InkWell(onTap: () {
 
                       },
-                          child: Text('Terms and Condition')),
+                          child: Text('Terms and Condition',
+                            style: TextStyle(
+                              color: Color(0xff2b6ed4),
+                              decoration: TextDecoration.underline,
+                            ),
+                          )),
                     ],
                   ),
                   Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text('and'),
+                      Text('and '),
                       InkWell(
-                        onTap: () {},
-                        child: Text('  Privacy Policy'),
+                        onTap: () {
+
+                        },
+                        child: Text('Privacy Policy.',
+                          style: TextStyle(
+                            color: Color(0xff2b6ed4),
+                            decoration: TextDecoration.underline,
+                          ),
+                        ),
                       ),
                     ],
                   ),
