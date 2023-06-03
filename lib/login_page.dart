@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
+  // String email;
+  // String password;
+  bool remember = false;
+  final List<String> errors = [];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -17,14 +21,17 @@ class LoginPage extends StatelessWidget {
                     fit: BoxFit.cover),
               ),
             ),
+
             Padding(
               padding: const EdgeInsets.only(left: 18, right: 18, top: 30),
+
               child: Column(
                 children: [
                   Text(
-                      "Enter your mobile number",
+                    "Enter your mobile number",
                     style: TextStyle(
                       fontSize: 20,
+
                     ),
                   ),
                   SizedBox(height:10),
@@ -33,8 +40,14 @@ class LoginPage extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
-                      //Checkbox(value: null, onChanged:null),
+                      Checkbox(value: remember, onChanged: (value) {
+                        // setState(() {
+                        //   remember = value;
+                        // });
+                       },
+                      ),
                       Text("Remember Me"),
+                      Spacer(),
                       Text(
                         " Forgot Password",
                         style: TextStyle(
@@ -45,7 +58,7 @@ class LoginPage extends StatelessWidget {
                     ],
                   ),
 
-                  SizedBox(height:35),
+                  SizedBox(height:30),
                   MaterialButton(
                     minWidth: double.infinity,
                     height: 60,
