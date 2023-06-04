@@ -1,3 +1,4 @@
+import 'package:driver_app/singUpPage.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
@@ -9,7 +10,7 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: Colors.white,
-        body: Column(
+        body: ListView(
           children: [
             Container(
               padding: EdgeInsets.only(top: 100),
@@ -22,10 +23,12 @@ class LoginPage extends StatelessWidget {
               ),
             ),
 
+
             Padding(
               padding: const EdgeInsets.only(left: 18, right: 18, top: 30),
-
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                mainAxisSize: MainAxisSize.min,
                 children: [
                   Text(
                     "Enter your mobile number",
@@ -36,29 +39,40 @@ class LoginPage extends StatelessWidget {
                   ),
                   SizedBox(height:10),
                   inputFile(hintext: "Enter a mobile number"),
+                  SizedBox(
+                    height: 15,
+                  ),
                   inputFile(hintext: "password", obscureText: true, ),
                   Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: <Widget>[
-                      Checkbox(value: remember, onChanged: (value) {
+
+                      Checkbox(
+
+                        materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+                        value: remember, onChanged: (value) {
                         // setState(() {
                         //   remember = value;
                         // });
-                       },
+                      },
                       ),
-                      Text("Remember Me"),
+                      Text("Remember Me",
+                        style: TextStyle(
+                          color: Color(0xff7E8389),
+                          fontSize: 15,
+                        ),
+                      ),
                       Spacer(),
                       Text(
                         " Forgot Password",
                         style: TextStyle(
                           color: Color(0xff2b6ed4),
-                          fontSize: 18,
+                          fontSize: 15,
                         ),
                       )
                     ],
                   ),
 
-                  SizedBox(height:30),
+                  SizedBox(height:18),
                   MaterialButton(
                     minWidth: double.infinity,
                     height: 60,
@@ -86,7 +100,7 @@ class LoginPage extends StatelessWidget {
                     minWidth: double.infinity,
                     height: 60,
                     onPressed: () {
-
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=> SingUpPage()));
                     },
                     // defining the shape
                     shape: RoundedRectangleBorder(
@@ -99,7 +113,7 @@ class LoginPage extends StatelessWidget {
                       "CREATE NEW ACCOUNT",
                       style: TextStyle(
                           color: Color(0xff2b6ed4),
-                          fontSize: 18
+                          fontSize: 16
                       ),
                     ),
                   ),
@@ -108,13 +122,18 @@ class LoginPage extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text('Tapping equals agreement to our '),
+                      Text('Tapping equals agreement to our ',
+                        style: TextStyle(
+                          fontSize: 12,
+                        ),
+                      ),
                       InkWell(onTap: () {
 
                       },
-                          child: Text('Terms and Condition',
+                          child: Text('Terms and Condition,',
                             style: TextStyle(
                               color: Color(0xff2b6ed4),
+                              fontSize: 12,
                               decoration: TextDecoration.underline,
                             ),
                           )),
@@ -123,7 +142,11 @@ class LoginPage extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Text('and '),
+                      Text('and ',
+                        style: TextStyle(
+                          fontSize: 12,
+                        ),
+                      ),
                       InkWell(
                         onTap: () {
 
@@ -131,6 +154,7 @@ class LoginPage extends StatelessWidget {
                         child: Text('Privacy Policy.',
                           style: TextStyle(
                             color: Color(0xff2b6ed4),
+                            fontSize: 12,
                             decoration: TextDecoration.underline,
                           ),
                         ),
@@ -158,9 +182,6 @@ Widget inputFile({hintext, obscureText = false}) {
           enabledBorder: OutlineInputBorder(),
         ),
       ),
-      SizedBox(
-        height: 15,
-      )
     ],
   );
 }
