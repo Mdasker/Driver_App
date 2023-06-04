@@ -1,4 +1,4 @@
-import 'package:driver_app/singUpPage.dart';
+import 'package:driver_app/registration_page.dart';
 import 'package:flutter/material.dart';
 
 class LoginPage extends StatelessWidget {
@@ -25,7 +25,7 @@ class LoginPage extends StatelessWidget {
 
 
             Padding(
-              padding: const EdgeInsets.only(left: 18, right: 18, top: 30),
+              padding: const EdgeInsets.only(left: 18, right: 18, top: 20),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisSize: MainAxisSize.min,
@@ -100,7 +100,7 @@ class LoginPage extends StatelessWidget {
                     minWidth: double.infinity,
                     height: 60,
                     onPressed: () {
-                      Navigator.push(context, MaterialPageRoute(builder: (context)=> SingUpPage()));
+                      Navigator.push(context, MaterialPageRoute(builder: (context)=> RegistrationPage()));
                     },
                     // defining the shape
                     shape: RoundedRectangleBorder(
