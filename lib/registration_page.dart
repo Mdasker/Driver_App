@@ -1,3 +1,4 @@
+import 'package:driver_app/signup_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -429,7 +430,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
                         minWidth: double.infinity,
                         height: 60,
                         onPressed: () {
-                          // Navigator.push(context, MaterialPageRoute(builder: (context)=> LoginPage()));
+                          Navigator.push(context, MaterialPageRoute(builder: (context)=> SignupPage()));
                         },
                         color: Color(0xff2b6ed4),
                         shape: RoundedRectangleBorder(
