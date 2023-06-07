@@ -9,10 +9,10 @@ class RegistrationPage extends StatefulWidget {
 }
 
 class _RegistrationPageState extends State<RegistrationPage> {
-
   final TextEditingController _usernameController = TextEditingController();
   final TextEditingController _nidpassportController = TextEditingController();
-  final TextEditingController _drivinglicenseController = TextEditingController();
+  final TextEditingController _drivinglicenseController =
+  TextEditingController();
   final TextEditingController _mobilenumberController = TextEditingController();
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _addressController = TextEditingController();
@@ -36,11 +36,12 @@ class _RegistrationPageState extends State<RegistrationPage> {
       appBar: AppBar(
         backgroundColor: Color(0xFF2B6ED4),
         elevation: 0,
-        leading:IconButton(
-          onPressed: (){
+        leading: IconButton(
+          onPressed: () {
             Navigator.of(context).pop();
           },
-          icon: SvgPicture.asset("assets/icons/back_arrow_icon.svg",
+          icon: SvgPicture.asset(
+            "assets/icons/back_arrow_icon.svg",
           ),
         ),
       ),
@@ -49,7 +50,7 @@ class _RegistrationPageState extends State<RegistrationPage> {
           Container(
             height: 198.21,
             decoration: BoxDecoration(
-              color:Color(0xFF2B6ED4),
+              color: Color(0xFF2B6ED4),
               borderRadius: BorderRadius.only(
                 bottomLeft: Radius.circular(30),
                 bottomRight: Radius.circular(30),
@@ -65,39 +66,48 @@ class _RegistrationPageState extends State<RegistrationPage> {
                     child: Column(
                       mainAxisSize: MainAxisSize.min,
                       children: [
-                        SvgPicture.asset("assets/icons/registration_camera_icon.svg"),
-                        SizedBox(height: 17,),
+                        SvgPicture.asset(
+                            "assets/icons/registration_camera_icon.svg"),
+                        SizedBox(
+                          height: 17,
+                        ),
                         Container(
                           height: 38,
                           width: 125,
                           decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(10.0), // Adjust the radius as per your needs
+                            borderRadius: BorderRadius.circular(
+                                10.0), // Adjust the radius as per your needs
                             border: Border.all(
                               color: Colors.white,
                               width: 1.0,
                             ),
                           ),
                           child: TextButton(
-                              onPressed: (){},
-                              child: Text("Upload",style: TextStyle(color: Colors.white),)
-                          ),
+                              onPressed: () {},
+                              child: Text(
+                                "Upload",
+                                style: TextStyle(color: Colors.white),
+                              )),
                         ),
                       ],
                     ),
                   ),
                 ),
               ],
-
             ),
           ),
-          SizedBox(height: 16,),
+          SizedBox(
+            height: 16,
+          ),
           Padding(
             padding: const EdgeInsets.only(left: 19),
-            child: Text("Driver Information",
+            child: Text(
+              "Driver Information",
               style: TextStyle(
                 fontSize: 18,
-                color:Color(0xFF323232) ,
-              ),),
+                color: Color(0xFF323232),
+              ),
+            ),
           ),
           Padding(
             padding: const EdgeInsets.all(19.0),
@@ -105,185 +115,316 @@ class _RegistrationPageState extends State<RegistrationPage> {
               children: [
                 Form(
                   child: Column(
-                    mainAxisAlignment: MainAxisAlignment.start,
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      Text("Full Name (same as NID*)",
+                      Text(
+                        "Full Name (same as NID*)",
                         style: TextStyle(
                           fontSize: 14,
-                          color:Color(0xFFA0A8B1) ,
+                          color: Color(0xFFA0A8B1),
                         ),
                       ),
                       const SizedBox(height: 8.0),
                       TextFormField(
                         style: TextStyle(color: Colors.black),
                         controller: _usernameController,
-                        decoration:InputDecoration(
+                        decoration: InputDecoration(
+
                           labelText: 'Name',
                           labelStyle: TextStyle(color: Color(0xFF7E8389)),
                           filled: true,
                           border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(10),
-                              borderSide: BorderSide(width: 1,color: Color(0xFF7E8389))
-                          ),
+                              borderSide: BorderSide(
+                                  width: 1, color: Color(0xFF7E8389))),
                           enabledBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10.0),
                             borderSide: BorderSide(color: Color(0xFF7E8389)),
                           ),
                         ),
                       ),
-                      const SizedBox(height: 16,),
-
-                      Text("NID/Passport Number*",
+                      const SizedBox(
+                        height: 16,
+                      ),
+                      Text(
+                        "NID/Passport Number*",
                         style: TextStyle(
                           fontSize: 14,
-                          color:Color(0xFFA0A8B1) ,
+                          color: Color(0xFFA0A8B1),
                         ),
                       ),
                       const SizedBox(height: 8.0),
                       TextFormField(
                         style: TextStyle(color: Colors.black),
                         controller: _nidpassportController,
-                        decoration:InputDecoration(
+                        decoration: InputDecoration(
                           labelText: 'e.g 123 456 00000',
                           labelStyle: TextStyle(color: Color(0xFF7E8389)),
                           filled: true,
                           border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(10),
-                              borderSide: BorderSide(width: 1,color: Color(0xFF7E8389))
-                          ),
+                              borderSide: BorderSide(
+                                  width: 1, color: Color(0xFF7E8389))),
                           enabledBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10.0),
                             borderSide: BorderSide(color: Color(0xFF7E8389)),
                           ),
                         ),
                       ),
-                      const SizedBox(height: 16,),
-
-                      Text("Driving License Number",
+                      const SizedBox(
+                        height: 16,
+                      ),
+                      Text(
+                        "Driving License Number",
                         style: TextStyle(
                           fontSize: 14,
-                          color:Color(0xFFA0A8B1) ,
+                          color: Color(0xFFA0A8B1),
                         ),
                       ),
                       const SizedBox(height: 8.0),
                       TextFormField(
                         style: TextStyle(color: Colors.black),
                         controller: _drivinglicenseController,
-                        decoration:InputDecoration(
+                        decoration: InputDecoration(
                           labelText: 'e.g 123 456 0000000',
                           labelStyle: TextStyle(color: Color(0xFF7E8389)),
                           filled: true,
                           border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(10),
-                              borderSide: BorderSide(width: 1,color: Color(0xFF7E8389))
-                          ),
+                              borderSide: BorderSide(
+                                  width: 1, color: Color(0xFF7E8389))),
                           enabledBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10.0),
                             borderSide: BorderSide(color: Color(0xFF7E8389)),
                           ),
                         ),
                       ),
-                      const SizedBox(height: 16,),
-
-                      Text("Mobile Number",
+                      const SizedBox(
+                        height: 16,
+                      ),
+                      Text(
+                        "Mobile Number",
                         style: TextStyle(
                           fontSize: 14,
-                          color:Color(0xFFA0A8B1) ,
+                          color: Color(0xFFA0A8B1),
                         ),
                       ),
                       const SizedBox(height: 8.0),
                       TextFormField(
                         style: TextStyle(color: Colors.black),
                         controller: _mobilenumberController,
-                        decoration:InputDecoration(
+                        decoration: InputDecoration(
                           labelText: 'Mobile number',
                           labelStyle: TextStyle(color: Color(0xFF7E8389)),
                           filled: true,
                           border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(10),
-                              borderSide: BorderSide(width: 1,color: Color(0xFF7E8389))
-                          ),
+                              borderSide: BorderSide(
+                                  width: 1, color: Color(0xFF7E8389))),
                           enabledBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10.0),
                             borderSide: BorderSide(color: Color(0xFF7E8389)),
                           ),
                         ),
                       ),
-                      const SizedBox(height: 16,),
-
-                      Text("Email (optional)",
+                      const SizedBox(
+                        height: 16,
+                      ),
+                      Text(
+                        "Email (optional)",
                         style: TextStyle(
                           fontSize: 14,
-                          color:Color(0xFFA0A8B1) ,
+                          color: Color(0xFFA0A8B1),
                         ),
                       ),
                       const SizedBox(height: 8.0),
                       TextFormField(
                         style: TextStyle(color: Colors.black),
                         controller: _emailController,
-                        decoration:InputDecoration(
+                        decoration: InputDecoration(
                           labelText: 'Email',
                           labelStyle: TextStyle(color: Color(0xFF7E8389)),
                           filled: true,
                           border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(10),
-                              borderSide: BorderSide(width: 1,color: Color(0xFF7E8389))
-                          ),
+                              borderSide: BorderSide(
+                                  width: 1, color: Color(0xFF7E8389))),
                           enabledBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10.0),
                             borderSide: BorderSide(color: Color(0xFF7E8389)),
                           ),
                         ),
                       ),
-                      const SizedBox(height: 16,),
-
-                      Text("Address*",
+                      const SizedBox(
+                        height: 16,
+                      ),
+                      Text(
+                        "Address*",
                         style: TextStyle(
                           fontSize: 14,
-                          color:Color(0xFFA0A8B1) ,
+                          color: Color(0xFFA0A8B1),
                         ),
                       ),
                       const SizedBox(height: 8.0),
                       TextFormField(
                         style: TextStyle(color: Colors.black),
                         controller: _addressController,
-                        decoration:InputDecoration(
+                        decoration: InputDecoration(
                           labelText: 'Enter address',
                           labelStyle: TextStyle(color: Color(0xFF7E8389)),
                           filled: true,
                           border: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(10),
-                              borderSide: BorderSide(width: 1,color: Color(0xFF7E8389))
-                          ),
+                              borderSide: BorderSide(
+                                  width: 1, color: Color(0xFF7E8389))),
                           enabledBorder: OutlineInputBorder(
                             borderRadius: BorderRadius.circular(10.0),
                             borderSide: BorderSide(color: Color(0xFF7E8389)),
                           ),
                         ),
                       ),
-                      const SizedBox(height: 16,),
-                      Text("Gender",
+                      const SizedBox(
+                        height: 16,
+                      ),
+                      Text(
+                        "Gender",
                         style: TextStyle(
                           fontSize: 16,
-                          color:Color(0xFF7E8389) ,
+                          color: Color(0xFF7E8389),
                         ),
                       ),
-                      Radio(value: 1, groupValue: _value, onChanged: (value){
-                        setState(() {
-                          _value = value!;
-                        });
-                      },),
-                      Text("Male"),
-                      Radio(value: 2, groupValue: _value, onChanged: (value){setState(() {
-                        _value = value!;
-                      });},),
-                      Text("Female"),
-                      Radio(value: 3, groupValue: _value, onChanged: (value){setState(() {
-                        _value = value!;
-                      });},),
-                      Text("Other"),
+                      Row(
+                        children: [
+                          Expanded(
+                            child: Row(
 
+                              children: [
+                                Radio(
+                                  value: 1,
+                                  groupValue: _value,
+                                  onChanged: (value) {
+                                    setState(() {
+                                      _value = value!;
+                                    });
+                                  },
+                                ),
+                                Text("Male",
+                                style: TextStyle(
+                                  color: Color(0xFF7E8389),
+                                ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Expanded(
+                            child: Row(
+
+                              children: [
+                                Radio(
+                                  value: 2,
+                                  groupValue: _value,
+                                  onChanged: (value) {
+                                    setState(() {
+                                      _value = value!;
+                                    });
+                                  },
+                                ),
+                                Text("Female",
+                                  style: TextStyle(
+                                    color: Color(0xFF7E8389),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          Expanded(
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                Radio(
+                                  value: 3,
+                                  groupValue: _value,
+                                  onChanged: (value) {
+                                    setState(() {
+                                      _value = value!;
+                                    });
+                                  },
+                                ),
+                                Text("Other",
+                                  style: TextStyle(
+                                    color: Color(0xFF7E8389),
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                        ],
+                      ),
+                      Row(
+
+                        children: [
+                          Expanded(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(
+                                  "NID/Passport Photo",
+                                  style: TextStyle(
+                                    fontSize: 15,
+                                    color: Color(0xFFA0A8B1),
+                                  ),
+                                ),
+                                const SizedBox(
+                                  height: 8,
+                                ),
+                                Container(
+                                  height: 108,
+                                  width: 180,
+                                  decoration: BoxDecoration(
+                                    borderRadius: BorderRadius.circular(10.0),
+                                    border: Border.all(
+                                        color: Colors.grey
+                                    ),
+                                    //color: Color(0xFF7E8389)
+
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          SizedBox(width: 15,),
+                          Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: [
+                              Text(
+                                "Driving License Photo",
+                                style: TextStyle(
+                                  fontSize: 15,
+                                  color: Color(0xFFA0A8B1),
+                                ),
+                              ),
+                              const SizedBox(
+                                height: 8,
+                              ),
+                              Container(
+                                height: 108,
+                                width: 180,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(10.0),
+                                  border: Border.all(
+                                      color: Color(0xFFA0A8B1),
+                                  ),
+                                  //color: Color(0xFF7E8389)
+
+                                ),
+                              ),
+                            ],
+                          ),
+                        ],
+                      ),
+                      const SizedBox(
+                        height: 16,
+                      ),
                       MaterialButton(
                         minWidth: double.infinity,
                         height: 60,
@@ -301,16 +442,23 @@ class _RegistrationPageState extends State<RegistrationPage> {
                               style: TextStyle(
                                   color: Colors.white,
                                   fontWeight: FontWeight.w600,
-                                  fontSize: 18),
+                                  fontSize: 20),
                             ),
                           ),
                         ),
                       ),
-
                     ],
                   ),
                 ),
-                const SizedBox(height: 16.0),
+                const SizedBox(height: 27.0),
+                Center(
+                  child: Container(
+                    height: 4,
+                    width: 134,
+                    color: Color(0xff424242),
+                  ),
+                ),
+                const SizedBox(height: 6.0),
               ],
             ),
           ),
@@ -319,4 +467,3 @@ class _RegistrationPageState extends State<RegistrationPage> {
     );
   }
 }
-
