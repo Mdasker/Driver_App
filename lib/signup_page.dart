@@ -1,3 +1,4 @@
+import 'package:driver_app/vehiclereg_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -9,6 +10,18 @@ class SignupPage extends StatefulWidget {
 }
 
 class _SignupPageState extends State<SignupPage> {
+
+  final TextEditingController _otpController = TextEditingController();
+  final TextEditingController _passwordController = TextEditingController();
+
+  @override
+  void dispose() {
+    _otpController.dispose();
+    _passwordController.dispose();
+    super.dispose();
+  }
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -26,7 +39,7 @@ class _SignupPageState extends State<SignupPage> {
         title: Text("Otp",
         style: TextStyle(
           fontSize: 20,
-          color: Colors.black,
+          color: Color(0xFF424242),
            ),
         ),
       ),
@@ -71,7 +84,7 @@ class _SignupPageState extends State<SignupPage> {
                         const SizedBox(height: 15),
                         TextFormField(
                           style: TextStyle(color: Colors.black),
-                          // controller: _nameController,
+                          controller: _otpController,
                           decoration: InputDecoration(
                             labelText: 'OTP number',
                             labelStyle: TextStyle(color: Color(0xFF7E8389)),
@@ -92,7 +105,7 @@ class _SignupPageState extends State<SignupPage> {
                         TextFormField(
                           obscureText: true,
                           style: TextStyle(color: Colors.black),
-                          // controller: _passwordController,
+                          controller: _passwordController,
                           decoration: InputDecoration(
                             labelText: 'Password',
                             labelStyle: TextStyle(color: Color(0xFF7E8389)),
@@ -112,7 +125,7 @@ class _SignupPageState extends State<SignupPage> {
                           minWidth: double.infinity,
                           height: 60,
                           onPressed: () {
-                            // Navigator.push(context, MaterialPageRoute(builder: (context)=> LoginPage()));
+                            Navigator.push(context, MaterialPageRoute(builder: (context)=> VehicleRegistration()));
                           },
                           color: Color(0xff2b6ed4),
                           shape: RoundedRectangleBorder(
