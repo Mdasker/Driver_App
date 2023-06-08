@@ -459,7 +459,6 @@ class _RegistrationPageState extends State<RegistrationPage> {
                     color: Color(0xff424242),
                   ),
                 ),
-                const SizedBox(height: 6.0),
               ],
             ),
           ),
