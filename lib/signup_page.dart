@@ -25,44 +25,42 @@ class _SignupPageState extends State<SignupPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Color(0xFFFFFFFF),
-        elevation: 0,
-        leading: IconButton(
-          onPressed: () {
-            Navigator.of(context).pop();
-          },
-          icon: SvgPicture.asset(
-            "assets/icons/back_arrow_icon.svg",
+        appBar: AppBar(
+          backgroundColor: Color(0xFFFFFFFF),
+          elevation: 0,
+          leading: IconButton(
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
+            icon: SvgPicture.asset(
+              "assets/icons/back_arrow_icon.svg",
+            ),
+          ),
+          title: Text("Otp",
+            style: TextStyle(
+              fontSize: 20,
+              color: Color(0xFF424242),
+            ),
           ),
         ),
-        title: Text("Otp",
-        style: TextStyle(
-          fontSize: 20,
-          color: Color(0xFF424242),
-           ),
-        ),
-      ),
         body: ListView(
           children: [
-            Container(
-              padding: EdgeInsets.only(top: 100),
-              width: double.infinity,
-              height: 320,
-              decoration: BoxDecoration(
-                image: DecorationImage(
-                    image: AssetImage("assets/images/signup_page.png"),
-                    fit: BoxFit.cover),
-              ),
-            ),
-
-
             Padding(
-              padding: const EdgeInsets.only(left: 18, right: 18, top: 20),
+              padding: const EdgeInsets.only(left: 18, right: 18),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisSize: MainAxisSize.min,
                 children: [
+                  Container(
+                    padding: EdgeInsets.only(top: 100),
+                    width: double.infinity,
+                    height: 320,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                          image: AssetImage("assets/images/signup_page.png"),
+                          fit: BoxFit.cover),
+                    ),
+                  ),
                   Form(
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -172,7 +170,7 @@ class _SignupPageState extends State<SignupPage> {
                       ],
                     ),
                   ),
-                  const SizedBox(height: 45.0),
+                  const SizedBox(height: 70.0),
                   Center(
                     child: Container(
                       height: 4,
